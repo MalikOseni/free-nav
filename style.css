@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: auto;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  transition: all .3s ease;
+}
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: lightgreen;
+  max-width: 2500px;
+}
+header .navbar{
+  display: flex;
+  height: 35px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .navlink{
+  position: fixed;
+  display: block;
+  width: 15.7rem;
+  top: 0;
+  left: 0%;
+  padding: 2px 20px;
+  line-height: 40px;
+  background: lightgreen;
+  height: 100vh;
+  z-index: 100;
+  transition: all .3s ease;
+}
+header .navbar .navlink  .link{
+  display: block;
+}
+header .navbar .navlink .side-logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+header .navbar .logo-section a{
+  font-size: 1.3rem;
+  text-align: center;
+  color: aliceblue;
+  font-weight: 700;
+}
+header .navbar .navlink .side-logo > a,
+header .navbar .navlink .side-logo .close,
+header .navbar .menu{
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+header .navbar .navlink .link li a{
+  color: aliceblue;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+header .navbar .navlink .link li .sub-menu{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  line-height: 40px;
+  display: none;
+}
+header .navbar .navlink .link li .sub-menu li{
+  /* display: none; */
+  padding: 0 1.2rem;
+}
+header .navbar .navlink .link li .sub-menu li a{
+  font-size: 1rem;
+}
+header .navbar .navlink .link li .sub-menu .more-submenu{
+  display: none;
+  position: relative;
+  left: 0;
+}
+header .navbar .navlink .link li .sub-menu .more-submenu li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .navlink .link li:hover .service-arrow,
+header .navbar .navlink .link li:hover .product-arrow{
+  transform: rotate(0);
+}
+header .navbar .navlink .link li .sub-menu .more:hover .more-submenu{
+  display: none;
+}
+header .navbar .navlink .link li:hover .service-submenu,
+header .navbar .navlink .link li:hover .product-submenu{
+  display: none;
+}
+header .navbar .navlink.show1 .link li:hover .service-submenu,
+header .navbar .navlink.show3 .link li:hover .product-submenu,
+header .navbar .navlink.show2 .link li .sub-menu .more:hover .more-submenu{
+display: block;
+}
+header .navbar .navlink.show1 .link li:hover .service-arrow,
+header .navbar .navlink.show3 .link li:hover .product-arrow {
+  transform: rotate(180deg);
+}
+header .navbar .navlink.show2 .link li .sub-menu .more:hover .more-arrow{
+  transform: rotate(90deg);
+}
+header .navbar .search-box{
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+header .navbar .search-box i{
+  position: absolute;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+header .navbar .search-box .input-box{
+position: absolute;
+right: calc(100% - 55px);
+top: 80px;
+height: 60px;
+width: 220px;
+background: lightgreen;
+border-radius: 6px;
+opacity: 0;
+visibility: hidden;
+transition: all .3s ease;
+}
+header .navbar.active .search-box .input-box{
+top: 50px;
+opacity: 1;
+visibility: visible;
+}
+header .navbar .search-box .input-box::before{
+  content: "";
+  position: absolute;
+  background: lightgreen;
+  height: 20px;
+  width: 20px;
+  right: 1rem;
+  top: -9px;
+  z-index: 1;
+  transform: rotate(45deg);
+}
+header .navbar .search-box .input-box input{
+  position: absolute;
+  height: 40px;
+  width: 210px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  line-height: 40px;
+  outline: none;
+  border: none;
+  padding-left: .5rem;
+  border-radius: 5px;
+}
+@media screen and (min-width:800px) {
+  header .navbar .navlink .side-logo>a,
+  header .navbar .navlink .side-logo .close,
+  header .navbar .menu {
+    display: none;
+    }
+    header {
+      width: 100%;
+      background: pink;
+    }
+    header .navbar {
+    display: flex;
+    }
+        header .navbar .navlink {
+          position: relative;
+          height: 100%;
+      background: pink; 
+      width: 950px;
+      margin-bottom: 9px;
+    }
+        header .navbar .navlink .link {
+      display: flex;
+    }
+  header .navbar .navlink .link li {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 0 14px;
+  }
+  header .navbar .navlink .link li a{
+    color: black;
+  }
+    header .navbar .navlink .link li .sub-menu {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: pink;
+      line-height: 40px;
+      width: 179px;
+    }
+header .navbar .navlink .link li .sub-menu li {
+  /* display: none; */
+  padding: 0 1rem;
+  border-bottom: 1px solid #fff;
+}
+header .navbar .navlink .link li .sub-menu li a {
+  font-size: .9rem;
+}
+header .navbar .navlink .link li .sub-menu .more-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+}
